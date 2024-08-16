@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas Gradient Example</title>
+</head>
+<body>
+<canvas id="myCanvas" width="400" height="200"></canvas>
+
+<script>
+// Get the canvas element and its drawing context
+const canvas = document.getElementById('myCanvas');
+const ctx = canvas.getContext('2d');
+
+// Create a linear gradient
+let gradient = ctx.createLinearGradient(0, 0, 400, 0);
+
+// Add color stops to the gradient
+gradient.addColorStop(0, 'red');
+gradient.addColorStop(1, 'blue');
+
+// Use the gradient to fill a rectangle
+ctx.fillStyle = gradient;
+ctx.fillRect(0, 0, 400, 200);
+</script>
+</body>
+</html>
